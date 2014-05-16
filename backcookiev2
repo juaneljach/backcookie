@@ -2,8 +2,11 @@ import os
 import sys                                    
 import optparse                               
 from sys import argv                           
-import requests
-
+try:
+	import requests
+except:
+	print "Please install requests library, you can do it executing: \n"
+	print "pip install requests"
 try:
 	from whois import extract_domain
 except:
