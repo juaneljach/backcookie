@@ -53,11 +53,11 @@ class Core:
 			self.url = str(r.url)
 			self.url = extract_domain(self.url)
 		except:
-			Error()
+			self.Error()
 		if validate[0] == "0" or vcmd == "command":
 			print color["blue"] + r.text.strip() + color["white"]
 		else:
-			Error()
+			self.Error()
 
 	def shell(self, host, cookie):
 		self.backcookie("cd",host,cookie,"")
